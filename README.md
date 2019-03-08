@@ -22,8 +22,8 @@ We were talking about:
 Additional Tutorials
 https://unity3d.com/learn/tutorials/s/roll-ball-tutorial
 Introduction
-1.1 Setting up the Game
-1.2 Moving the Player
+1.1 Setting up the Game 
+1.2 Moving the Player 
 2.1 Moving the Camera
 
 ## Contact
