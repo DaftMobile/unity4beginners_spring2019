@@ -19,6 +19,13 @@ We were talking about:
 - What is GetComponent<Type>()? how to get acces to other scripts https://www.youtube.com/watch?v=PBqTrK3z_KM
 - Creation of single initialization point
 
+Additional Tutorials
+https://unity3d.com/learn/tutorials/s/roll-ball-tutorial
+Introduction
+1.1 Setting up the Game
+1.2 Moving the Player
+2.1 Moving the Camera
+
 ## Contact
 
 - [Slack](https://daftacademy2019spring.slack.com/)
