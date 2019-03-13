@@ -6,8 +6,21 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
+          <e p="CorutinSingleton.cs" t="Include" />
+          <e p="Input" t="Include">
+            <e p="AlwaysLeftInputWrapper.cs" t="Include" />
+            <e p="InputWrapperWithConstraints.cs" t="Include" />
+            <e p="Interfaces" t="Include">
+              <e p="IInputWrapper.cs" t="Include" />
+            </e>
+          </e>
           <e p="MainSceneInitializer.cs" t="Include" />
+          <e p="MeteorSpawner" t="Include">
+            <e p="IMeteorSpawner.cs" t="Include" />
+            <e p="MeteorSpawner.cs" t="Include" />
+          </e>
           <e p="RotationgScript.cs" t="Include" />
+          <e p="ShipController.cs" t="Include" />
         </e>
       </e>
       <e p="DaftAcademy2019Spring.sln" t="IncludeFlat" />

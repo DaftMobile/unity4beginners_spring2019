@@ -1,0 +1,7 @@
+Napisz skrypt który stworzy 50 kostek 50 pi³ek w losowych miejscach od x<-50,50> y<-50,50> z<-50,50>
+w czasie tworzenia obiektów dodaj 
+25 komponentów przesuwaj¹cych obiekt w lewo 1 jednostkê na sekundê
+25 komponentów przesuwaj¹cych obiekt w prawo 1 jednostkê na sekundê
+25 komponentów przesuwaj¹cych obiekt w góre 1 jednostkê na sekundê
+25 komponentów przesuwaj¹cych obiekt w dó³ 1 jednostkê na sekundê
+jeœli ktoœ wcisnie z kostki robi¹ siê nieaktwyne

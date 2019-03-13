@@ -2,22 +2,39 @@
 
 public class MainSceneInitializer : MonoBehaviour
 {
-    [SerializeField] private GameObject shipPrefab;
+    [Header("shipVariables")] [SerializeField]
+    private GameObject shipPrefab;
 
+    [SerializeField] private float shipSpeed;
+    [SerializeField] private Vector2 shipStartingPos;
+
+    [Header("MapConstrainst")] 
+    [SerializeField] private float xMapConstraint;
+    [SerializeField] private float yMapConstraint;
+
+    [Header("MeteorVariables")]
+    [SerializeField] private GameObject meteorPrefab;
+    [SerializeField] private float spawnTime;
+    [SerializeField] private float minMeteoSpeed, maxMeteoSpeed;
+    
     private void Awake()
     {
+        CreateShip();
+        
+        MeteorSpawner meteorSpawner = new MeteorSpawner(meteorPrefab, spawnTime,
+            minMeteoSpeed,maxMeteoSpeed,xMapConstraint,yMapConstraint, -yMapConstraint,
+            0.01f);
+        
     }
 
-    // Use this for initialization
-    void Start()
+    private void CreateShip()
     {
-        for (int i = 0; i < 5; i++)
-        {
-            GameObject ship = Instantiate(shipPrefab);
-            ship.transform.position = new Vector3(
-                Random.Range(-10, 10),
-                Random.Range(-5, 5),
-                0);
-        }
+        GameObject ship = Instantiate(shipPrefab);
+        IInputWrapper inputWrapper =
+            new InputWrapperWithConstraints(ship.transform, xMapConstraint,
+                yMapConstraint);
+
+        ship.GetComponent<ShipController>().Initalize(shipSpeed, inputWrapper);
+        ship.transform.position = shipStartingPos;
     }
 }
