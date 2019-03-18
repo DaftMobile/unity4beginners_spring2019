@@ -26,6 +26,16 @@ Introduction
 1.2 Moving the Player 
 2.1 Moving the Camera
 
+### Class 2: Lets make a game
+We were talking about:
+  - Creating ship from prefab
+  - Moving ship with constraints
+  - interface for ship moving
+  - Introduciton to coroutines
+  
+  Additional tasks 
+  roll a ball : 6-7-8 https://www.youtube.com/watch?v=HlDGSStxuHI&list=PLX2vGYjWbI0Q-s4_lX0h4i2zbZqlg4OfF&index=6
+
 ## Contact
 
 - [Slack](https://daftacademy2019spring.slack.com/)
