@@ -12,19 +12,29 @@ public class MainSceneInitializer : MonoBehaviour
     [SerializeField] private float xMapConstraint;
     [SerializeField] private float yMapConstraint;
 
-    [Header("MeteorVariables")]
+    [Header("MeteorVariables")] 
+    [SerializeField]private int optimumPoolCount;
+    [SerializeField] private Transform PoolRootTransform;
     [SerializeField] private GameObject meteorPrefab;
     [SerializeField] private float spawnTime;
     [SerializeField] private float minMeteoSpeed, maxMeteoSpeed;
-    
+
+    [Header("Tools")] [SerializeField] private GameObject CoroutineRunnerPrefab;
+    private ICoroutineRunner coroutineRunner;
+
     private void Awake()
     {
+        coroutineRunner = Instantiate(CoroutineRunnerPrefab)
+            .GetComponent<ICoroutineRunner>();
+
+        ObjectPoool objectPoool = new ObjectPoool(meteorPrefab, 
+            PoolRootTransform, optimumPoolCount);
+
         CreateShip();
-        
+
         MeteorSpawner meteorSpawner = new MeteorSpawner(meteorPrefab, spawnTime,
-            minMeteoSpeed,maxMeteoSpeed,xMapConstraint,yMapConstraint, -yMapConstraint,
-            0.01f);
-        
+            minMeteoSpeed, maxMeteoSpeed, xMapConstraint, -xMapConstraint, yMapConstraint, -yMapConstraint,
+            0.01f, coroutineRunner, objectPoool);
     }
 
     private void CreateShip()

@@ -179,46 +179,6 @@ Transform:
   m_Father: {fileID: 1549396710}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &653457082
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 653457084}
-  - component: {fileID: 653457083}
-  m_Layer: 0
-  m_Name: OmgSingleton
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &653457083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 653457082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66f90caeb3cb41e392b70df23a98f71a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &653457084
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 653457082}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &892002323
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,11 +288,15 @@ MonoBehaviour:
   shipStartingPos: {x: 0, y: 0}
   xMapConstraint: 12
   yMapConstraint: 5
+  optimumPoolCount: 8
+  PoolRootTransform: {fileID: 1996004152}
   meteorPrefab: {fileID: 1782814428619666, guid: 6853ea54259fc2b438a05cda2d8ffebb,
     type: 2}
   spawnTime: 0.5
   minMeteoSpeed: 3
   maxMeteoSpeed: 10
+  CoroutineRunnerPrefab: {fileID: 1943525291944110, guid: 40eecc5963a23c640ade2b55edd3513e,
+    type: 2}
 --- !u!4 &1179632959
 Transform:
   m_ObjectHideFlags: 0
@@ -375,4 +339,32 @@ Transform:
   - {fileID: 580255798}
   m_Father: {fileID: 0}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1996004151
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1996004152}
+  m_Layer: 0
+  m_Name: MeteoObjectPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1996004152
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1996004151}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

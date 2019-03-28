@@ -19,15 +19,12 @@ public class ShipController : MonoBehaviour
         MoveShip(KeyCode.W, Vector3.up);
         MoveShip(KeyCode.S, Vector3.down);
         MoveShip(KeyCode.D, Vector3.right);
-
-        
     }
 
     private void MoveShip(KeyCode code, Vector3 direction)
     {
         if (inputWrapper.GetKey(code))
         {
-            Debug.Log("im in" + direction + " " + ShipSpeed);
             transform.position += direction * Time.deltaTime * ShipSpeed;
         }
     }

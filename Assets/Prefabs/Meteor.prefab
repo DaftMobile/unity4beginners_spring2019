@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 23517014286703780}
   - component: {fileID: 135850348996943588}
   - component: {fileID: 114387394028853210}
+  - component: {fileID: 114642464206791484}
   m_Layer: 0
   m_Name: Meteor
   m_TagString: Untagged
@@ -96,6 +97,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0cce45d762161f49a76e7e76adcaea9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114642464206791484
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1782814428619666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5f42a2cca20f6148a7860cdb9d20294, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &135850348996943588
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -103,7 +115,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1782814428619666}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
